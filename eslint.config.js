@@ -15,7 +15,6 @@ export default [
     },
   },
 
-  // use dprint to format TOML
   {
     files: ['**/*.blade.php'],
     languageOptions: {
@@ -25,7 +24,7 @@ export default [
       format,
     },
     rules: {
-      'format/dprint': ['error', { language: 'blade', languageOptions: { tabWidth: 4 } }],
+      'format/prettier': ['error', { language: 'blade', languageOptions: { tabWidth: 4 } }],
     },
   },
 ]
