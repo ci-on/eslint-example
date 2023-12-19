@@ -11,10 +11,11 @@ export default [
       format,
     },
     rules: {
-      'format/prettier': ['error', { parser: 'css', tabWidth: 4 }],
+      'format/prettier': ['error', { parser: 'css', tabWidth: 2 }],
     },
   },
 
+  // use dprint to format TOML
   {
     files: ['**/*.blade.php'],
     languageOptions: {
@@ -24,21 +25,7 @@ export default [
       format,
     },
     rules: {
-      'format/prettier': ['error', { parser: 'blade', tabWidth: 4 }],
-    },
-  },
-
-  // use dprint to format TOML
-  {
-    files: ['**/*.toml'],
-    languageOptions: {
-      parser: format.parserPlain,
-    },
-    plugins: {
-      format,
-    },
-    rules: {
-      'format/dprint': ['error', { language: 'toml', languageOptions: { indentWidth: 2 } }],
+      'format/dprint': ['error', { language: 'blade', languageOptions: { tabWidth: 4 } }],
     },
   },
 ]
